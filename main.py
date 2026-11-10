@@ -15,7 +15,7 @@ with urlopen(BLACKLIST_URL) as response:
         multi_source = [
             r
             for r in reader
-            if r["type"] == "ipv4" and int(r["source_count"]) > 2
+            if r["type"] == "ipv4" and int(r["source_count"]) > 3
         ]
 
 output_path = Path("output/multi_source.csv")
