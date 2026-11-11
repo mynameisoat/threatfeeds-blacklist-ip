@@ -2,7 +2,7 @@ name: Update Multi Source IP Feed
 
 on:
   schedule:
-    - cron: "05 * * * *"
+    - cron: "17 * * * *"
       timezone: "Asia/Bangkok"
 
   workflow_dispatch:
