@@ -1,10 +1,10 @@
+
 name: Update Multi Source IP Feed
 
 on:
   schedule:
-    - cron: "17 * * * *"
-      timezone: "Asia/Bangkok"
-
+    - cron: '17 * * * *'
+      timezone: 'Asia/Bangkok'
   workflow_dispatch:
 
 permissions:
@@ -16,22 +16,22 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v7
+        uses: actions/checkout@v6
 
       - name: Setup Python
-        uses: actions/setup-python@v7
+        uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
+          python-version: '3.12'
 
       - name: Run feed generator
         run: python main.py
 
-      - name: Update CSV on GitHub
+      - name: Update TXT feed on GitHub
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add output/multi_source.csv
+          git add output/multi_source.txt
 
           if ! git diff --cached --quiet; then
             git commit -m "Update multi-source IP feed"
