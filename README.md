@@ -1,3 +1,4 @@
+[![Update Multi Source IP Feed](https://github.com/mynameisoat/threatfeeds-blacklist-ip/actions/workflows/update-feed.yml/badge.svg)](https://github.com/mynameisoat/threatfeeds-blacklist-ip/actions/workflows/update-feed.yml)
 ## Credits & Acknowledgements
 
 This project is based on and adapted from the original work:
